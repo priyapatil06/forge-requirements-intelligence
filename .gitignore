@@ -1,0 +1,19 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+node_modules/
+dist/
+.vite/
+*.db
+*.sqlite3
+.DS_Store
+coverage/
+
+# Python package metadata
+*.egg-info/

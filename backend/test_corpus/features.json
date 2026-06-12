@@ -1,0 +1,16 @@
+[
+  {"name":"AI Ticket Routing","domain":"support","description":"Classify incoming support tickets, route high-confidence tickets, require review for medium confidence, and send low-confidence tickets to triage."},
+  {"name":"ACH Payment Onboarding","domain":"banking","description":"Collect bank-account details, verify ownership, create a payment method, and handle duplicate and failed verification attempts."},
+  {"name":"Refund Approval","domain":"generic","description":"Allow agents to request refunds, require supervisor approval above a threshold, and record the final decision."},
+  {"name":"KYC Exception Review","domain":"banking","description":"Route failed identity checks to an operations analyst and preserve evidence and decision history."},
+  {"name":"Password Reset","domain":"generic","description":"Issue a time-limited reset link, invalidate previous links, and lock repeated suspicious attempts."},
+  {"name":"Subscription Cancellation","domain":"generic","description":"Let customers cancel, show effective date and final charge, and route disputed charges to support."},
+  {"name":"Warehouse Downtime Alert","domain":"generic","description":"Detect unavailable robots, alert operators, and escalate unresolved downtime to a site lead."},
+  {"name":"Appointment Scheduling","domain":"generic","description":"Book available appointments, prevent double booking, and notify users when a provider cancels."},
+  {"name":"Invoice Approval","domain":"generic","description":"Route invoices by amount and department, require dual approval for high-value invoices, and track rejections."},
+  {"name":"Customer Data Export","domain":"compliance","description":"Verify a data subject request, collect data from source systems, generate an export, and expire the download."},
+  {"name":"Fraud Case Review","domain":"banking","description":"Create cases from risk alerts, assign an investigator, and capture disposition and supporting evidence."},
+  {"name":"Feature Flag Rollout","domain":"generic","description":"Create a staged rollout, stop automatically on error-rate thresholds, and support immediate rollback."},
+  {"name":"Enterprise User Provisioning","domain":"generic","description":"Provision users from an identity provider, map roles, and deprovision access when employment ends."},
+  {"name":"Right to Deletion","domain":"compliance","description":"Validate deletion eligibility, respect legal holds, delete or anonymize data, and produce an audit record."}
+]

@@ -1,0 +1,38 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: forge
+      POSTGRES_USER: forge
+      POSTGRES_PASSWORD: forge
+    volumes:
+      - forge_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U forge -d forge"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    env_file: .env
+    environment:
+      FORGE_DATABASE_URL: postgresql+psycopg://forge:forge@db:5432/forge
+      FORGE_FRONTEND_URL: http://localhost:5173
+      FORGE_CORS_ORIGINS: http://localhost:5173
+      ATLASSIAN_REDIRECT_URI: http://localhost:8000/api/v1/jira/callback
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  forge_postgres:
