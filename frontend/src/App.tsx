@@ -348,7 +348,7 @@ export default function App() {
     <div className="app-shell">
       <header className="topbar">
         <div className="brand"><span>Forge</span><small>Requirements Intelligence</small></div>
-        <div className="topbar-meta"><Badge tone={mockMode ? "amber" : "green"}>{mockMode ? "DEMO / MOCK LLM" : "CLAUDE API"}</Badge><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub repository</a></div>
+        <div className="topbar-meta"><Badge tone={mockMode ? "amber" : "green"}>{mockMode ? "DEMO / MOCK LLM" : "CLAUDE API"}</Badge><a href="https://github.com/priyapatil06/forge-requirements-intelligence" target="_blank" rel="noreferrer">GitHub repository</a></div>
       </header>
 
       <aside className="sidebar">
